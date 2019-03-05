@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+  
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Leaflet简介 | Medus</title>
+  <meta name="author" content="547">
+  
+  <meta name="description" content="简介Leaflet是一个领先的轻量级开源JS交互式地图库，大约只有33KB大小的JS，拥有大多数开发者所需要的所有地图特性。Leaflet的设计基于简洁、性能和可用性，它能有效的应用于主流的桌面系统和移动平台，而且有大量的插件可扩展，同时还有一个易于使用的文档化的api文档。Leaflet无法单独提">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Leaflet简介">
+  <meta property="og:site_name" content="Medus">
+
+  
+    <meta property="og:image" content="undefined">
+  
+
+  
+    <meta http-equiv="Content-Language" content="en">
+  
+
+  <link href="/img/favicon.png" rel="icon">
+  
+    <link rel="apple-touch-icon" href="/img/apple-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-icon.png">
+    
+
+  <link rel="alternate" href="/atom.xml" title="Medus" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  
+  <style type="text/css">
+  /* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2) */
+body{ -webkit-animation: bugfix infinite 1s; }
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+  
+
+  
+    article .post-content-index .entry{max-height: 550px; overflow:hidden;}
+  
+</style>
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'null', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+
+
+
+
+  
+    
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Playball" rel="stylesheet" type="text/css">
+    
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+
+  
+
+
+
+</head>
+</html>
+
+<body>
+  <header id="header" class="inner"><div class="padding">
+	<div class="alignleft logo">
+	  <h1><a href="/">Medus</a></h1>
+	</div>
+	<nav id="main-nav" class="alignright">
+		<input type="checkbox" id="toggle">
+		<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick><i class="fa fa-bars"></i></label>
+	  <ul class="menu">
+	    
+	      <li><a href="/">Home</a></li>
+	    
+	      <li><a href="/archives">Archives</a></li>
+	    
+	    
+	  </ul>
+	</nav>
+	<div class="clearfix"></div>
+</div>
+</header>
+  <div id="page-heading-wrap">
+  	<div class="inner">
+      <div class="padding">
+    		
+          <h1>Leaflet简介</h1>
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2016-04-08T09:30:23.000Z">2016-04-08</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">547</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+            </li>
+          </ul>
+        
+      </div>
+  	</div>
+  </div>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper" class="padding"><article class="post">
+  
+  
+    <div class="post-content">
+  
+      
+      <div class="entry">
+        
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><a href="http://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>是一个领先的轻量级开源JS交互式地图库，大约只有33KB大小的JS，拥有大多数开发者所需要的所有地图特性。<br>Leaflet的设计基于简洁、性能和可用性，它能有效的应用于主流的桌面系统和移动平台，而且有大量的插件可扩展，同时还有一个易于使用的文档化的api<a href="http://leafletjs.com/reference.html" target="_blank" rel="noopener">文档</a>。<br>Leaflet无法单独提供地图服务，所以需要加载相应的地图瓦片。它可以加载各种地图瓦片，其中就包括OpenStreetMap。<br>OpenStreetMap(OSM) 是开放数据，由OpenStreetMap基金会（OSMF）采用开放数据共享开放数据库许可协议（ODbL）授权。只要您表明来源为 OpenStreetMap 及其贡献者，您就可以自由地复制、分发、传送和改编OSM的数据，所以在使用OSM瓦片的时候，需要注明<a href="http://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OSM著作权</a><br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L.tileLayer(&apos;http://&#123;s&#125;.tile.osm.org/&#123;z&#125;/&#123;x&#125;/&#123;y&#125;.png&apos;, &#123;</span><br><span class="line">	attribution: &apos;&amp;copy; &lt;a href=&quot;http://osm.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt; contributors&apos;</span><br><span class="line">&#125;).addTo(map);</span><br></pre></td></tr></table></figure></p>
+<h2 id="接口介绍"><a href="#接口介绍" class="headerlink" title="接口介绍"></a>接口介绍</h2><p>具体可参考api文档。</p>
+<h2 id="插件介绍"><a href="#插件介绍" class="headerlink" title="插件介绍"></a>插件介绍</h2><p>具体可参考<a href="http://leafletjs.com/plugins.html" target="_blank" rel="noopener">插件介绍</a></p>
+<h3 id="Leaflet-Control-Geocoder"><a href="#Leaflet-Control-Geocoder" class="headerlink" title="Leaflet Control Geocoder"></a>Leaflet Control Geocoder</h3><p>同时支持地址编码和逆地址解析的插件，内置支持Nominatim, Bing, MapQuest, Mapbox, What3Words, Google and Photon等服务而且可以简单的扩展其他供应商的服务，其中Nominatim是免费的服务，也是这个插件默认使用的服务，这个逆地址解析服务的返回数据会根据客户浏览器的语言而返回相应语言的地址信息，同时可以通过设置返回数据语言来固定一种语言，代码如下<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var map = L.map(&apos;map&apos;).setView([0, 0], 2),</span><br><span class="line">geocoder = L.Control.Geocoder.nominatim(&#123;</span><br><span class="line">	reverseQueryParams: &#123;</span><br><span class="line">		&quot;accept-language&quot;: &quot;en-US&quot;,</span><br><span class="line">		&quot;zoom&quot;: 18</span><br><span class="line">	&#125;</span><br><span class="line">&#125;),</span><br><span class="line">control = L.Control.geocoder(&#123;</span><br><span class="line">	geocoder: geocoder</span><br><span class="line">&#125;).addTo(map);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Leaflet-label"><a href="#Leaflet-label" class="headerlink" title="Leaflet.label"></a>Leaflet.label</h3><p>Leaflet自身api不支持label，可以使用该插件代替，这个插件源码简单易读，如果有需要可以自己扩展。</p>
+
+        
+      </div>
+      <footer>
+        
+          
+  
+  <div class="categories">
+    <a href="/categories/前端杂货/">前端杂货</a>
+  </div>
+
+          
+  
+  <div class="tags">
+    <a href="/tags/leaflet/">leaflet</a>, <a href="/tags/osm/">osm</a>
+  </div>
+
+          <div class="share">
+  
+
+    
+
+    
+      <div class="g-plusone"></div>
+
+      <script type="text/javascript">
+        window.___gcfg = {lang: 'en-GB'};
+
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/platform.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+      </script>
+    
+
+    
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="halfer53">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    
+  
+</div>
+          
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//meduswin.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div></div>
+    <aside id="sidebar" class="alignright"><div class="padding">
+	
+	  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+	
+	  
+<div class="widget recent-post">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2016/04/08/Leaflet简介/">Leaflet简介</a>
+      </li>
+    
+  </ul>
+</div>
+
+	
+	  
+<div class="widget category">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/前端杂货/">前端杂货</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+	
+	  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  
+    <a href="/tags/leaflet/">leaflet<small>1</small></a>
+  
+    <a href="/tags/osm/">osm<small>1</small></a>
+  
+</div>
+
+	
+</div></aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="padding">
+	<div class="alignleft">
+	  
+	  &copy; 2019 547
+	  
+	  Powerd by <a href="http://hexo.io/" target="_blank">hexo</a>
+	  and Theme by <a href="https://github.com/halfer53/metro-light" target="_blank">metro-light</a>
+	</div>
+
+	<div class="alignright">
+		
+		
+		
+		
+		
+		
+		
+	</div>
+
+	<div class="clearfix"></div>
+</div>
+
+<div class="scroll-top"><i class="fa fa-arrow-circle-up"></i></div></footer>
+  
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+<script type="text/javascript">
+$(window).scroll(function() {
+
+    if($(this).scrollTop() > 400) {
+        $('.scroll-top').fadeIn(200);
+    } else {
+        $('.scroll-top').fadeOut(200);
+    }
+});
+
+$('.scroll-top').bind('click', function(e) {
+    e.preventDefault();
+    $('body,html').animate({scrollTop:0},200);
+});
+</script>
+
+
+  
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//meduswin.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</body>
+</html>
